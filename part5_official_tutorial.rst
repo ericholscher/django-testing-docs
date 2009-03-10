@@ -1,1 +1,6 @@
-This will contain an extended Part 5 of the official Django tutorial covering testing.
+
+Django Tutorial Part 5: Testing
+=============================================
+
+
+Now that you have a working polls application, lets make sure that it will continue to work.
