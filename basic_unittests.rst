@@ -25,9 +25,9 @@ Making a unit test is a lot like making a python class. As per usual, the
 `Django docs`_ have lots of great information and examples. They will show
 you how to do some easy stuff with your Django models. This tutorial will
 mostly be about how to use unit tests inside Django, irregardless of the data
-at hard. So let's start with a very basic unit test.
+at hard. So let's start with a very basic unit test.::
 
-::import unittest
+    import unittest
 
     class TestBasic(unittest.TestCase):
         "Basic tests"
@@ -51,9 +51,9 @@ lot more flexibility in the tests.
 Now if you try to run these tests, you will again not get have them showing
 up in your output! You need to go into your ``__init__.py`` in your tests
 directory. It should now look like the following (assuming you followed part
-1 of this series):
+1 of this series)::
 
-::from unittst import *
+    from unittst import *
 
     import doctst
 
@@ -71,9 +71,9 @@ test classes that you defined in your file. So I could have as easily put
 syntax allows us to add more tests to the file later and not have to edit it.
 
 You can go ahead and run your tests, and see if they're being properly
-imported.
+imported.::
 
-::[eric@Odin:~/EH]$ ./manage.py test mine
+    [eric@Odin:~/EH]$ ./manage.py test mine
     Creating test database...
     Creating table auth_permission
     [Database stuff removed]
@@ -91,9 +91,9 @@ A couple neat features
 
 There are some neat things you can do with basic unit tests. Below I'll show
 an addition to the above file, which is another test class, with a bit more
-functionality.
+functionality.::
 
-::class TestBasic2(unittest.TestCase):
+    class TestBasic2(unittest.TestCase):
         "Show setup and teardown"
 
         def setUp(self):
@@ -136,9 +136,9 @@ to be unique. I generally tend to follow whatever naming convention I've used
 for my named url patterns.
 
 When you go ahead and run your tests, you should see one that fails (the last
-one).
+one).::
 
-::[eric@Odin:~/EH]$ ./manage.py test mine
+    [eric@Odin:~/EH]$ ./manage.py test mine
     Creating test database...
     Creating table auth_permission
     [Database stuff removed]

@@ -45,9 +45,9 @@ Views
 
 So lets go ahead and take a look to see what the tests `used to look like`_.
 He has already updated the project with my new tests, so you can check them
-out, and break them at your leisure.
+out, and break them at your leisure.::
 
-::"""
+    """
     >>> from django.test import Client
     >>> from basic.blog.models import Post, Category
     >>> import datetime
@@ -138,9 +138,9 @@ So we need to add some stuff to the tests. We need to get some data into the
 tests, in order to use the date-based archives, and search stuff. So we're
 going to take the stuff that was previously at the bottom of the test, and
 move it up to the top. Also need to add 2 posts and categories, so that we
-know that our filtering functionality is working.
+know that our filtering functionality is working.::
 
-::>>> category = Category(title='Django', slug='django')
+    >>> category = Category(title='Django', slug='django')
     >>> category.save()
 
     >>> category2 = Category(title='Rails', slug='rails')
@@ -190,9 +190,9 @@ But do you really want to do that?
 Let's go poking around inside of response.context, which is a dictionary of
 contexts for the response. We only care about [-1], because that is where our
 context will be (except for generic views, annoying right?). So go down to
-the first view, ``blog_index``, and put
+the first view, ``blog_index``, and put::
 
-::>>> response = client.get(reverse('blog_index'))
+    >>> response = client.get(reverse('blog_index'))
 
     >>> response.context[-1]['object_list']
     [test]
@@ -200,9 +200,9 @@ the first view, ``blog_index``, and put
 
 In your tests. We know [test] won't match, but we just want to know what the
 real output is. When you go ahead and run the tests your should find some
-output like this:
+output like this::
 
-::Expected:
+    Expected:
         [test]
     Got:
 
@@ -234,9 +234,9 @@ Updating current tests
 Now that we have our hackjob way of getting data out of the tests, we can
 move on to writing more tests. Go down to the next view test of
 ``blog_category_list``, and pull the old object_list trick. You should get
-the following back out once you run your tests:
+the following back out once you run your tests::
 
-::Expected:
+    Expected:
          [test]
      Got:
          [<Category: Django>, <Category: Rails>]
@@ -253,9 +253,9 @@ remember or don't know what variables we'll be looking for in the context, I
 usually just put ``>>> request.context[-1]`` to output all of it, and see
 what it is that I want. For the ``category.get_absolute_url()`` we need
 ``object_list`` again. For the ``post.get_absolute_url()`` we just want
-``object``.
+``object``.::
 
-::>>> response = client.get(category.get_absolute_url())
+    >>> response = client.get(category.get_absolute_url())
     >>> response.context[-1]['object_list']
     [<Post: DJ Ango>]
     >>> response.status_code
@@ -277,9 +277,9 @@ Creating new tests
 So now we've improved on the tests that were already there. Let's go ahead
 and write some new ones for search and the date-based views. Starting with
 search, because it will be interesting. Search requires some GET requests
-with the test client, which should be fun.
+with the test client, which should be fun.::
 
-::>>> response = client.get(reverse('blog_search'), {'q': 'DJ'})
+    >>> response = client.get(reverse('blog_search'), {'q': 'DJ'})
 
     >>> response.context[-1]['object_list']
     [<Post: DJ Ango>]
@@ -308,10 +308,9 @@ passing them as ``?q=test`` on the URL wouldn't work. `Russ`_ is working on
 fixing that, and by the time you read this, it might not be true.
 
 Next, on to testing the generic date views. You should be in the hang of it
-by now.
+by now.::
 
-::>>> response = client.get(reverse('blog_detail', args=[2008, 'apr', 2,
-'where']))
+    >>> response = client.get(reverse('blog_detail', args=[2008, 'apr', 2, 'where']))
 
     >>> response.context[-1]['object']
     <Post: Where my grails at?>

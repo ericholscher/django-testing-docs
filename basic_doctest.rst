@@ -44,9 +44,9 @@ The other place your Doctests can go is inside your tests directory. A
 doctests file is usually pretty simple. A doctest is just a large string, so
 there isn't much else to put besides a string. Usually you want to use the
 triple quote, multi-line string delimiter to define them. That way your " and
-'s inside of your doctests don't break.
+'s inside of your doctests don't break.::
 
-::"""
+    """
     This is my worthless test.
     >>> print "wee"
     wee
@@ -67,9 +67,9 @@ Now here is the tricky part; go ahead and try and run your test suite. In
 your project directory run ``./manage.py test APPNAME``. It will show you
 that you have passed 0 tests. 0 tests? We just defined one.
 
-You need to go into your ``__init__.py`` file and put some stuff in there.
+You need to go into your ``__init__.py`` file and put some stuff in there.::
 
-::import doctst
+    import doctst
     __test__ = {
         'Doctest': doctst
     }

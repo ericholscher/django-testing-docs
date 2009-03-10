@@ -31,9 +31,9 @@ have an app that has data in the database, you can use the ``./manage.py
 dumpdata <app>`` `command`_ to create a fixture from the current data in the
 database. It's handy to note that you can use the ``--format`` tag to specify
 the output format, and the ``--indent`` command to make the output prettier.
-My preferred command is
+My preferred command is::
 
-:: #This assumes you are at the project level, right above your app.
+    #This assumes you are at the project level, right above your app.
      #and that APP/fixtures/ exists
      ./manage.py dumpdata APP --format=yaml --indent=4 >
      APP/fixtures/APP.yaml
@@ -77,9 +77,9 @@ Doc tests are made to be a simple answer to a relatively simple problem, and
 fixtures aren't a huge deal for them. So a lot of the functionality that we
 get for free with Unit tests, has to be hacked into Doc tests. I will just
 show how to do the basic things, because implementing anything beyond that
-isn't very useful for any of us.
+isn't very useful for any of us.::
 
-::>>> from django.core.management import call_command
+    >>> from django.core.management import call_command
     >>> call_command("loaddata", "' + 'fixturefile.json' + '",
     verbosity=0)
 
@@ -99,9 +99,9 @@ very good reason.
 Generally in Doc tests, you would create your content as if you were on the
 command line. This shows how doc tests are generally limited in their scope.
 You go ahead and create the objects that you care about in the test
-explicitly, and then run your tests against them. A simple example:
+explicitly, and then run your tests against them. A simple example::
 
-::>>> from mine.models import Site
+    >>> from mine.models import Site
     >>> s = Site.objects.create(url='http://google.com', query='test',
     title='test', content='lots of stuff')
 
@@ -156,9 +156,9 @@ going to go ahead and recreate the simple doc test above. It simply loads up
 a Site object into the database, checks for some data in it, then deletes it.
 The fixture handling will handle all of the loading and deleting for us, so
 all we need to worry about is testing our logic! This makes the test a lot
-easier to read, and makes its intention a lot clearer.
+easier to read, and makes its intention a lot clearer.::
 
-::from django.test import TestCase
+    from django.test import TestCase
     from mine.models import Site
 
     class SiteTests(TestCase):
