@@ -13,11 +13,26 @@ If you want to help contribute, please fork the docs and help out! Hopefully thi
 
 Contents:
 
+Mostly Complete docs
+--------------------
 .. toctree::
    :maxdepth: 2
-   :glob:
 
-   *
+   basic_doctests
+   basic_unittests
+   fixtures
+   views
+
+Unfinished docs
+---------------
+.. toctree::
+   :maxdepth: 2
+
+   models
+   mock_objects
+   template_tags
+   philosophy
+   part5_official_tutorial
 
 
 Indices and tables

@@ -1,3 +1,4 @@
+.. _part5_official_tutorial:
 
 Django Tutorial Part 5: Testing
 =============================================

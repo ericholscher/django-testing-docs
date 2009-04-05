@@ -1,3 +1,4 @@
+.. _basic_doctests:
 
 Introduction to Python/Django testing: Basic Doctests
 -----------------------------------------------------

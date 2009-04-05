@@ -1,3 +1,4 @@
+.. _basic_unittests:
 
 Introduction to Python/Django testing: Basic Unit Tests
 -------------------------------------------------------

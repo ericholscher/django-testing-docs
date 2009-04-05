@@ -1,3 +1,4 @@
+.. _views:
 
 Practical Django Testing Examples: Views
 ----------------------------------------
