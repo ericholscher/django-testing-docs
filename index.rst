@@ -11,6 +11,9 @@ If you want to help contribute, please fork the docs and help out! Hopefully thi
 
 .. _Github: http://github.com/ericholscher/django-testing-docs/tree/master
 
+If you have any questions, please contact `Eric Holscher <http://ericholscher.com>`__ at eric@ericholscher.com
+
+
 Contents:
 
 Mostly Complete docs
