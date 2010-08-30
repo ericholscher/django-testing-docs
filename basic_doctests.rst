@@ -124,7 +124,7 @@ interpreter. Example::
 The same output with the vanilla python shell::
 
     >>> {'key3': 'fff', 'key2': 123}
-    >>> {'key3': 'fff', 'key2': 123}
+    {'key3': 'fff', 'key2': 123}
 
 .. _official docs: http://docs.djangoproject.com/en/dev/topics/testing
     /#writing-doctests
