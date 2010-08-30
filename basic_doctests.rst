@@ -97,8 +97,38 @@ fragile, and shouldn't be used for everything. In the next segment, we will
 talk about unit tests. Then we will compare the two and see what the use
 cases are for each.
 
+Doctest Considerations
+~~~~~~~~~~~~~~~~~~~~~~
+
+Keep in mind that when the test runner executes a doctest, it does not
+process the output in any way. For instance, this doctest will fail::
+
+    >>> {"abc": 1, "def": 2}
+    {"abc": 1, "def": 2}
+
+The reason for the failure is that the python interpreter always, when 
+displaying dictionaries, converts double quotation marks into single quotes.
+This, on the other hand, will pass::
+
+    >>> {"abc": 1, "def": 2}
+    {'abc': 1, 'def': 2}
+
+Also, if you are using the popular python shell replacement ipython_
+to aide in creating dictests, keep in mind it will not necessarily
+output objects in the same format as the vanilla python interactive
+interpreter. Example::
+
+    In [1]: {'key3': 'fff', 'key2': 123}
+    Out[1]: {'key2': 123, 'key3': 'fff'}
+
+The same output with the vanilla python shell::
+
+    >>> {'key3': 'fff', 'key2': 123}
+    >>> {'key3': 'fff', 'key2': 123}
 
 .. _official docs: http://docs.djangoproject.com/en/dev/topics/testing
     /#writing-doctests
 .. _Python docs: http://www.python.org/doc/2.5.2/lib/doctest-which-
     docstrings.html
+
+.. _ipython: http://ipython.scipy.org/moin/
