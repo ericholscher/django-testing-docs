@@ -25,8 +25,8 @@ Writing your first unit test
 Making a unit test is a lot like making a python class. As per usual, the
 `Django docs`_ have lots of great information and examples. They will show
 you how to do some easy stuff with your Django models. This tutorial will
-mostly be about how to use unit tests inside Django, irregardless of the data
-at hard. So let's start with a very basic unit test.::
+mostly be about how to use unit tests inside Django, regardless of the data
+at hand. So let's start with a very basic unit test.::
 
     import unittest
 
