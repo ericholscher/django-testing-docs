@@ -5,7 +5,7 @@ Introduction to Python/Django tests: Fixtures
 In the first two posts of this `series`_, we talked about how to get the
 basic infrastructure for your tests up and running. You should have a file
 with doc tests and one with unit tests. They should be linked into your
-django project with an ``__init__.py`` file. If you were feeling adverterous
+django project with an ``__init__.py`` file. If you were feeling adventurous
 you may have even added some real content to them. Today we're going to start
 going down the road of getting some data into your tests.
 
@@ -178,7 +178,7 @@ easier to read, and makes its intention a lot clearer.::
 
 As you can see, this test is a lot simpler than the above one. It is also
 neat that we can edit the object and save it, and it doesn't matter. No other
-tests (if they existed) would be effected by this change. Notice that in my
+tests (if they existed) would be affected by this change. Notice that in my
 fixtures list, I only had mine and not mine.yaml or mine.json. It you don't
 add a file extension to your fixture, it will search for all fixtures with
 that name, of any extension. You can define an extension if you only want it

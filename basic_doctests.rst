@@ -15,8 +15,8 @@ The currently planned structure for this series is below. Please comment if
 there is something that you think is missing, or something that I shouldn't
 do. This is subject to change, a lot, as well, so your feedback will help
 direct it. Also note that most or all of this content is available in the
-Django and Python documentation, and I will try and point there and not re-
-invent the wheel. I hope that these posts will take a more practical look,
+Django and Python documentation, and I will try and point there and not
+reinvent the wheel. I hope that these posts will take a more practical look,
 and try to point out some pit falls and other things that are useful.
 
 
