@@ -11,7 +11,7 @@ each of the different kinds of tests in Django, and showing how to do them. I
 will also try to point out what you want to be doing to make sure you're
 getting good code coverage and following best practices.
 
-Instead of pick some contrived models and views, I figured I would do
+Instead of picking some contrived models and views, I figured I would do
 something a little bit more useful. I'm going to take one of my favorite open
 source Django apps, and write some tests for it! Everyone loves getting
 patches, and patches that are tests are a god send. So I figured that I might
