@@ -6,7 +6,7 @@ Introduction to Python/Django testing: Basic Doctests
 This is the first in a series of articles that will walk
 you through how to test your Django application. These posts will focus more
 on how to get things done in Django, but note that a lot of the content is
-applicable to pure python as well. A lot of best practices are codified into
+applicable to pure Python as well. A lot of best practices are codified into
 Django's testing framework, so that we don't have to worry about them! I will
 try to point them out as we are using them through, because they are good
 things to know.
@@ -58,11 +58,11 @@ triple quote, multi-line string delimiter to define them. That way your " and
 
 
 You can go ahead and put that in a file in your ``tests/`` directory, I named
-it ``doctst.py``. I didn't name it doctest, because of the python module with
+it ``doctst.py``. I didn't name it doctest, because of the Python module with
 the same name. It's generally good to avoid possible name overlaps. My
 application that I'm writing tests for is ``mine``, because it's the code for
 my website. Make sure that directory has an ``__init__.py`` as well, to
-signify that it is a python module.
+signify that it is a Python module.
 
 Now here is the tricky part; go ahead and try and run your test suite. In
 your project directory run ``./manage.py test APPNAME``. It will show you
@@ -77,7 +77,7 @@ You need to go into your ``__init__.py`` file and put some stuff in there.::
 
 
 You are importing the doc test module and then adding it to the ``__test__``
-dictionary. You have to do this because of the way that python handles
+dictionary. You have to do this because of the way that Python handles
 looking for doc tests. It looks for a ``__test__`` dictionary inside of your
 module, and if that exists it looks through it, executing all docstrings as
 doctests. For more information look at the `Python docs`_.
@@ -90,7 +90,7 @@ as one single test. This is one annoying thing that the doctests do.
 
 So now we have a test suite that is worthless, but you know how to use doc
 tests. If you didn't notice, the doctest format is simply the output of your
-default python shell, so when you are testing your code on the command line
+default Python shell, so when you are testing your code on the command line
 and it works, you can simple copy and paste it into your tests. This makes
 writing doc tests almost trivial. Note however, that they are somewhat
 fragile, and shouldn't be used for everything. In the next segment, we will
@@ -106,22 +106,22 @@ process the output in any way. For instance, this doctest will fail::
     >>> {"abc": 1, "def": 2}
     {"abc": 1, "def": 2}
 
-The reason for the failure is that the python interpreter always, when 
+The reason for the failure is that the Python interpreter always, when 
 displaying dictionaries, converts double quotes into single quotes.
 This, on the other hand, will pass::
 
     >>> {"abc": 1, "def": 2}
     {'abc': 1, 'def': 2}
 
-Also, if you are using the popular python shell replacement ipython_
+Also, if you are using the popular Python shell replacement IPython_
 to aide in creating doctests, keep in mind it will not necessarily
-output objects the same way as the vanilla python interactive
+output objects the same way as the vanilla Python interactive
 interpreter. Example::
 
     In [1]: {'key3': 'fff', 'key2': 123}
     Out[1]: {'key2': 123, 'key3': 'fff'}
 
-The same output with the vanilla python shell::
+The same output with the vanilla Python shell::
 
     >>> {'key3': 'fff', 'key2': 123}
     {'key3': 'fff', 'key2': 123}
@@ -133,4 +133,4 @@ Notice the difference between the order of the keys.
 .. _Python docs: http://www.python.org/doc/2.5.2/lib/doctest-which-
     docstrings.html
 
-.. _ipython: http://ipython.scipy.org/moin/
+.. _IPython: http://ipython.scipy.org/moin/
