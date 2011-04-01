@@ -22,7 +22,7 @@ existing test suite.
 Writing your first unit test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Making a unit test is a lot like making a python class. As per usual, the
+Making a unit test is a lot like making a Python class. As per usual, the
 `Django docs`_ have lots of great information and examples. They will show
 you how to do some easy stuff with your Django models. This tutorial will
 mostly be about how to use unit tests inside Django, regardless of the data
@@ -43,7 +43,7 @@ at hand. So let's start with a very basic unit test.::
 
 
 This is a very basic unit test. You will notice it is just normal a normal
-python class. You create a class that inherits from unittest.TestCase. This
+Python class. You create a class that inherits from unittest.TestCase. This
 tells unittest that it is a test file. Then you simply go in and define some
 functions (Note: they need to start with test so that unittest will run
 them), in which you assert some conditions which are true. This allows you a
@@ -66,7 +66,7 @@ directory. It should now look like the following (assuming you followed part
 
 Unit tests are a lot easier to import than doctests. You simply do a ``from
 <filename> import <testnames>``. I named my unit test file ``unittst.py``,
-and python will import that from the current directory. You are importing the
+and Python will import that from the current directory. You are importing the
 test classes that you defined in your file. So I could have as easily put
 ``from unittest import TestBasic`` and it would work. Using the ``import *``
 syntax allows us to add more tests to the file later and not have to edit it.
@@ -119,7 +119,7 @@ functionality.::
 
 Here you see that you can define a docstring for the tests. These are used
 when you are running the tests, so you have a human readable name. You'll
-also notice that I've used some more assertions. The `python docs`_ have a
+also notice that I've used some more assertions. The `Python docs`_ have a
 full list of assertions that you can make. The ``setUp`` and ``tearDown``
 methods are run before and after every test respectively. This allows you to
 set up a basic context or environment inside of each of your tests. This also
@@ -166,9 +166,9 @@ Now you can see for yourself that there are a lot of differences between Doc
 tests and Unit tests. They each serve their own purpose, and in the next post
 in this series I will talk about when you should use each. Unit tests require
 a little bit more up front effort; you can't just paste something out of your
-python shell and have it work. However, they give you a lot more flexibility.
+Python shell and have it work. However, they give you a lot more flexibility.
 
 
 .. _Django docs: http://docs.djangoproject.com/en/dev/topics/testing
     /#writing-unit-tests
-.. _python docs: http://docs.python.org/library/unittest.html#id1
+.. _Python docs: http://docs.python.org/library/unittest.html#id1
