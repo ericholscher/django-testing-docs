@@ -11,7 +11,7 @@ going down the road of getting some data into your tests.
 
 This post will cover fixtures. Fixtures are how you create a state for your
 database in your tests. This will be my first post in the comparison between
-Unit tests and Doc tests. I will focus on fixtures, but some other
+unit tests and doc tests. I will focus on fixtures, but some other
 differences between the two may become relevant throughout the post, and I
 will address them in turn.
 
@@ -72,10 +72,10 @@ of a hack, and maybe something could be done to make this easier.)
 Fixtures in Doc tests
 ~~~~~~~~~~~~~~~~~~~~~
 
-In what will become a recurring trend, doing fixtures in Doc tests is a hack.
+In what will become a recurring trend, doing fixtures in doc tests is a hack.
 Doc tests are made to be a simple answer to a relatively simple problem, and
 fixtures aren't a huge deal for them. So a lot of the functionality that we
-get for free with Unit tests, has to be hacked into Doc tests. I will just
+get for free with unit tests, has to be hacked into doc tests. I will just
 show how to do the basic things, because implementing anything beyond that
 isn't very useful for any of us.::
 
@@ -96,7 +96,7 @@ test. Doing things this way just makes writing tests a whole lot harder. It
 is indeed a hack, and one that shouldn't really be used unless you have a
 very good reason.
 
-Generally in Doc tests, you would create your content as if you were on the
+Generally in doc tests, you would create your content as if you were on the
 command line. This shows how doc tests are generally limited in their scope.
 You go ahead and create the objects that you care about in the test
 explicitly, and then run your tests against them. A simple example::
@@ -122,9 +122,9 @@ will know about it.
 Django's Testcase
 ~~~~~~~~~~~~~~~~~
 
-The fixture story in Unit tests is much better, as you would expect. However,
-before we go into how Unit tests use fixtures, there is something that I need
-to explain. Because of the fact that Unit tests are classes, they can be
+The fixture story in unit tests is much better, as you would expect. However,
+before we go into how unit tests use fixtures, there is something that I need
+to explain. Because of the fact that unit tests are classes, they can be
 subclassed just like any other Python class. This means that Django has
 provided it's own Testcase class that we can inherit from and get some nice
 extra Django functionality. The `official docs`_ has it really well
@@ -184,7 +184,7 @@ add a file extension to your fixture, it will search for all fixtures with
 that name, of any extension. You can define an extension if you only want it
 to search for those types of fields.
 
-I hope that you can see already how Unit Tests give you a lot more value when
+I hope that you can see already how unit tests give you a lot more value when
 working with fixtures than doc tests. Having all of the loading, unloading,
 and flushing handled for you means that it will be done correctly. Once you
 get a moderately complicated testing scheme, trying to handle that all
