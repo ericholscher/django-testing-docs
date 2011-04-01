@@ -7,7 +7,7 @@ Introduction to Python/Django testing: Basic Unit Tests
 Last post we talked about how to set up and use doc tests inside of Django.
 Today, in the second post of the series, we'll be talking about how to use
 the other testing framework that comes with Python, unittest. unittest is a
-xUnit type of testing system (JUnit from the java world is another example)
+xUnit type of testing system (JUnit from the Java world is another example)
 implemented in Python. It is a much more robust solution for testing than Doc
 tests, and allows for a lot more organization of code. We'll get into that in
 the next post in the series, comparing Unit and Doc tests.
@@ -49,7 +49,7 @@ functions (Note: they need to start with test so that unittest will run
 them), in which you assert some conditions which are true. This allows you a
 lot more flexibility in the tests.
 
-Now if you try to run these tests, you will again not get have them showing
+Now if you try to run these tests, you will again not see them showing
 up in your output! You need to go into your ``__init__.py`` in your tests
 directory. It should now look like the following (assuming you followed part
 1 of this series)::
@@ -125,7 +125,7 @@ methods are run before and after every test respectively. This allows you to
 set up a basic context or environment inside of each of your tests. This also
 insures that each of your tests do not edit the data that other tests depend
 on. This is a basic tenet of testing, that each test should stand alone, and
-not effect the others.
+not affect the others.
 
 This also seems like a good time to explicitly say that all of your test
 classes and files should start with test! If not, they will not be run! If
