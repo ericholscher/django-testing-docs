@@ -10,7 +10,7 @@ the other testing framework that comes with Python, unittest. unittest is a
 xUnit type of testing system (JUnit from the Java world is another example)
 implemented in Python. It is a much more robust solution for testing than Doc
 tests, and allows for a lot more organization of code. We'll get into that in
-the next post in the series, comparing Unit and Doc tests.
+the next post in the series, comparing unit and doc tests.
 
 So we're going to assume that you are picking up after the previous post in
 this series. If so, you should have a basic tests directory, with an
@@ -163,7 +163,7 @@ make that test pass (``self.assertFalse(self.a == 2)``). You get an OK from
 your tests, and we can go on our merry way.
 
 Now you can see for yourself that there are a lot of differences between Doc
-tests and Unit tests. They each serve their own purpose, and in the next post
+tests and unit tests. They each serve their own purpose, and in the next post
 in this series I will talk about when you should use each. Unit tests require
 a little bit more up front effort; you can't just paste something out of your
 Python shell and have it work. However, they give you a lot more flexibility.
