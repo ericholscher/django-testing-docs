@@ -87,10 +87,10 @@ isn't very useful for any of us.::
 
 In this snippet you are basically calling it the way it is called within
 Django. Normally when you are using loaddata, you would be calling it as
-``./manage.py loaddata FIXTURE``. . Note that the `loaddata docs`_ talk about
+``./manage.py loaddata FIXTURE``. Note that the `loaddata docs`_ talk about
 how to use loaddata normally. There are a couple of downsides to this method;
 The test is very fragile, if the fixture breaks, all of your tests fail.
-Also, you can really only call one fixtures at a time because there is no
+Also, you can really only call one fixture at a time because there is no
 setUp and tearDown that will make sure your environment is the same for every
 test. Doing things this way just makes writing tests a whole lot harder. It
 is indeed a hack, and one that shouldn't really be used unless you have a
@@ -133,9 +133,9 @@ documented.
 You'll notice that Django's Testcase has a section for the Test Client and
 URLConf configuration. We can safely skip those for the moment because they
 are geared towards testing views. The relevant sections for us at the moment
-are the Fixture loading and Assertions. I recommend that you actually read
+are Fixture loading and Assertions. I recommend that you actually read
 the entire testing doc, it isn't that long, and is packed full of useful
-information. However, knowing about all of the Assertions that are available
+information. However, knowing about all of the assertions that are available
 to you will make testing a little bit easier.
 
 
@@ -179,10 +179,10 @@ easier to read, and makes its intention a lot clearer.::
 As you can see, this test is a lot simpler than the above one. It is also
 neat that we can edit the object and save it, and it doesn't matter. No other
 tests (if they existed) would be affected by this change. Notice that in my
-fixtures list, I only had mine and not mine.yaml or mine.json. It you don't
+fixtures list, I only had mine and not mine.yaml or mine.json. If you don't
 add a file extension to your fixture, it will search for all fixtures with
 that name, of any extension. You can define an extension if you only want it
-to search for those types of fields.
+to search for those types of files.
 
 I hope that you can see already how unit tests give you a lot more value when
 working with fixtures than doc tests. Having all of the loading, unloading,
