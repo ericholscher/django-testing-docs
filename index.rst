@@ -26,6 +26,7 @@ Mostly Complete docs
    fixtures
    views
    serialization
+   coverage
 
 Unfinished docs
 ---------------
