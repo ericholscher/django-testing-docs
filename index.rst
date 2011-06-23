@@ -25,6 +25,8 @@ Mostly Complete docs
    basic_unittests
    fixtures
    views
+   serialization
+   coverage
 
 Unfinished docs
 ---------------
