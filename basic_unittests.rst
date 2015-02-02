@@ -42,7 +42,7 @@ at hand. So let's start with a very basic unit test.::
             assert a == 1
 
 
-This is a very basic unit test. You will notice it is just normal a normal
+This is a very basic unit test. You will notice it is just a normal
 Python class. You create a class that inherits from unittest.TestCase. This
 tells unittest that it is a test file. Then you simply go in and define some
 functions (Note: they need to start with test so that unittest will run
