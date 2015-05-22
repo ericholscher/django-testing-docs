@@ -14,7 +14,7 @@ the next post in the series, comparing unit and doc tests.
 
 So we're going to assume that you are picking up after the previous post in
 this series. If so, you should have a basic tests directory, with an
-``__init__.py`` and a ``doctst.py`` file inside of it. Today we are going to
+``__init__.py`` and a ``doctest.py`` file inside of it. Today we are going to
 write some very basic unit tests, and figure out how to wire those into your
 existing test suite.
 
@@ -54,18 +54,18 @@ up in your output! You need to go into your ``__init__.py`` in your tests
 directory. It should now look like the following (assuming you followed part
 1 of this series)::
 
-    from unittst import *
+    from unittest import *
 
-    import doctst
+    import doctest
 
     __test__ = {
-        'Doctest': doctst
+        'Doctest': doctest
         }
 
 
 
 Unit tests are a lot easier to import than doctests. You simply do a ``from
-<filename> import <testnames>``. I named my unit test file ``unittst.py``,
+<filename> import <testnames>``. I named my unit test file ``unittest.py``,
 and Python will import that from the current directory. You are importing the
 test classes that you defined in your file. So I could have as easily put
 ``from unittest import TestBasic`` and it would work. Using the ``import *``
@@ -147,7 +147,7 @@ one).::
     =====================================================
     FAIL: This test should fail
     Traceback (most recent call last):
-      File "/home/eric/Python/EH/mine/tests/unittst.py", line 35, in
+      File "/home/eric/Python/EH/mine/tests/unittest.py", line 35, in
       test_fail
         assert self.a == 2
     AssertionError
