@@ -89,7 +89,7 @@ save it, and then test it's view and get_absolute_url() method. This is a
 really clever way of testing a view and a model function (get_absolute_url)
 at the same time.
 
-Next a post is created, and saved, then a category it added to it, the one
+Next a post is created, and saved, then a category is added to it, the one
 created above. That is all that these tests do, but it covers a really good
 subsection of the code. It's always good to test if you can save your objects
 because a lot of bugs are found in that operation. So for the length of the
