@@ -52,7 +52,7 @@ out, and break them at your leisure.::
     >>> from basic.blog.models import Post, Category
     >>> import datetime
 
-    >>> from django.core.urlresolvers import reverse
+    >>> from django.urls import reverse
     >>> client = Client()
 
     >>> response = client.get(reverse('blog_index'))
