@@ -119,7 +119,7 @@ See `What is Wrong with Statement Coverage`_ for more insight, and refer to
 coverage techniques.
 
 
-.. _coverage: http://nedbatchelder.com/code/coverage/beta/
+.. _coverage: https://coverage.readthedocs.io/en/v4.5.x/
 .. _nose: http://code.google.com/p/python-nose/
 .. _django-nose: http://pypi.python.org/pypi/django-nose
 .. _What is Wrong with Statement Coverage: http://www.bullseye.com/statementCoverage.html
