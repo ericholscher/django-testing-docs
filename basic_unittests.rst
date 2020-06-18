@@ -123,7 +123,7 @@ also notice that I've used some more assertions. The `Python docs`_ have a
 full list of assertions that you can make. The ``setUp`` and ``tearDown``
 methods are run before and after every test respectively. This allows you to
 set up a basic context or environment inside of each of your tests. This also
-insures that each of your tests do not edit the data that other tests depend
+ensures that each of your tests do not edit the data that other tests depend
 on. This is a basic tenet of testing, that each test should stand alone, and
 not affect the others.
 
