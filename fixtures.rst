@@ -145,8 +145,8 @@ Fixtures in Unit Tests
 The big thing that the Django Testcase does for you in regards to fixtures is
 that it maintains a consistent state for all of your tests. Before each test
 is run, the database is flushed: returning it to a pristine state (like after
-your first syncdb). Then your fixture gets loaded into the DB, then setUp()
-is called, then your test is run, then tearDown() is called. Keeping your
+your first syncdb). Declare your fixture in the class which gets loaded into the DB,
+then setUp() is called, then your test is run, then tearDown() is called. Keeping your
 tests insulated from each other is incredibly important when you are trying
 to make a good test suite. Having tests altering each others data, or having
 tests that depend on another test altering data are inherently fragile.
