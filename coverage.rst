@@ -13,38 +13,35 @@ ones are never reached. At the end, it spits out a report that indicates which
 lines of code were not executed--this points directly to holes in your test
 coverage.
 
-The nose_ testing tool integrates nicely with coverage_, and django-nose_ ties
+The pytest_ testing tool integrates nicely with coverage_, and pytest-django_ ties
 it all into Django. This chapter will give an overview of how to get it working.
 
 
-Configure django-nose
+Configure pytest-django
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first thing to do is install django-nose_ using ``pip``::
+The first thing to do is install pytest, pytest-django, and pytest-cov using ``pip``::
 
-    $ pip install django-nose
+    $ pip install pytest pytest-django pytest-cov
 
 Then make these additions to your project's ``settings.py``::
 
     INSTALLED_APPS = (
         # ...
-        'django_nose',
+        'pytest',
     )
 
-    # Use nose to run all tests
-    TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+Next, create a ``pytest.ini`` file in the root of your project with the following content::
 
-    # Tell nose to measure coverage on the 'foo' and 'bar' apps
-    NOSE_ARGS = [
-        '--with-coverage',
-        '--cover-package=foo,bar',
-    ]
+    [pytest]
+    DJANGO_SETTINGS_MODULE = your_project_name.settings
+    python_files = tests.py test_*.py *_tests.py
+    addopts = --cov=your_app_name --cov-report=html
 
 Here, we're setting a couple of command-line arguments to be included every time
-we run ``python manage.py test``. The ``--with-coverage`` option says we want a
-coverage report, and the ``--cover-package`` option lists all of the modules we
-are hoping to cover (these are the names of your Django apps). For a complete
-list of other available options, run ``python manage.py help test``.
+we run ``pytest``. The ``--cov`` option says we want a coverage report for the specified app,
+and the ``--cov-report`` option specifies the format of the coverage report. For a complete
+list of other available options, run ``pytest --help``.
 
 
 Coverage reports
@@ -72,7 +69,7 @@ exception handler that never encountered an exception, in which case we could
 add tests that purposely cause that exception (and verify that the correct
 exception was raised).
 
-Try adding the ``--cover-html`` option to your ``NOSE_ARGS`` if you'd like a
+Try adding the ``--cov-report=html`` option to your ``addopts`` in ``pytest.ini`` if you'd like a
 nice HTML report that highlights the missing lines in your source code.
 
 
@@ -120,8 +117,8 @@ coverage techniques.
 
 
 .. _coverage: http://nedbatchelder.com/code/coverage/beta/
-.. _nose: http://code.google.com/p/python-nose/
-.. _django-nose: http://pypi.python.org/pypi/django-nose
+.. _pytest: https://docs.pytest.org/en/stable/
+.. _pytest-django: https://pytest-django.readthedocs.io/en/latest/
 .. _What is Wrong with Statement Coverage: http://www.bullseye.com/statementCoverage.html
 .. _Test coverage analysis: http://lautaportti.wordpress.com/2011/05/07/test-coverage-analysis/
 
