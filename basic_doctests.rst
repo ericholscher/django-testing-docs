@@ -70,9 +70,9 @@ that you have passed 0 tests. 0 tests? We just defined one.
 
 You need to go into your ``__init__.py`` file and put some stuff in there.::
 
-    import doctest
+    import doctst
     __test__ = {
-        'Doctest': doctest
+        'Doctest': doctst
     }
 
 
