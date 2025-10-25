@@ -8,7 +8,7 @@ you through how to test your Django application. These posts will focus more
 on how to get things done in Django, but note that a lot of the content is
 applicable to pure Python as well. A lot of best practices are codified into
 Django's testing framework, so that we don't have to worry about them! I will
-try to point them out as we are using them through, because they are good
+try to point them out as we are using them though, because they are good
 things to know.
 
 The currently planned structure for this series is below. Please comment if
