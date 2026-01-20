@@ -47,7 +47,7 @@ So lets go ahead and take a look to see what the tests `used to look like`_.
 He has already updated the project with my new tests, so you can check them
 out, and break them at your leisure.::
 
-    """
+    
     >>> from django.test import Client
     >>> from basic.blog.models import Post, Category
     >>> import datetime
@@ -77,7 +77,7 @@ out, and break them at your leisure.::
     >>> response = client.get(post.get_absolute_url())
     >>> response.status_code
     200
-    """
+    
 
 
 Notice how he is using reverse() when referring to his URLs, this makes tests
